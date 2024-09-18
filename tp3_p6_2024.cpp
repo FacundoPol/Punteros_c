@@ -77,7 +77,43 @@ void agregar_orden(tlista &lista,pnodo nuevo)
 	}
 }
 
-pnodo quitar_nodo(tlista &lista)
+pnodo quitar_nodo(tlista &lista,int valor)
 {
-	
+	pnodo extraido,i;
+	if(lista.inicio=NULL)
+	{
+		extraido=NULL;
+	}
+	else
+	{
+		if(lista.inicio->dato==valor)
+		{
+			if(lista.inicio->sig=lista.inicio;)
+			{
+				extraido=lista.inicio;
+				lista.inicio=NULL;
+				extraido->sig=NULL;
+				extraido->ant=NULL;
+			}
+			else
+			{
+				if(lista.inicio->sig!=lista.inicio)
+				{
+					extraido=lista.inicio;
+					lista.inicio=lista.inicio->sig;
+					lista.inicio->ant=extraido->ant;
+					(lista.inicio->ant)->sig=lista.inicio;
+				}
+				else
+				{
+					for(i=lista.inicio->sig;i!=lista.inicio&&i->dato!=valor;i=i->sig);
+					extraido=i;
+					(i->ant)->sig=i->sig;
+					(i->sig)->ant=i->ant;
+					extraido->sig=NULL;
+					extraido->ant=NULL;
+				}
+			}
+		}
+	}
 }
