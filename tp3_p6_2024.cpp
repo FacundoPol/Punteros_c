@@ -116,4 +116,25 @@ pnodo quitar_nodo(tlista &lista,int valor)
 			}
 		}
 	}
+	
+	return extraido;
+}
+
+bool buscar(tlista lista,int valor)
+{
+	bool encontrado=false;
+	pnodo i;
+	if(lista.inicio!=NULL)
+	{
+		if(lista.inicio->dato==valor)
+			encontrado=true;
+		else
+		{
+			for(i=lista.inicio->sig;i!=lista.inicio&&i->dato!=valor;i=i->sig);
+			if(i!=lista.inicio)
+				encontrado=true;
+		}
+	}
+	
+	return encontrado;
 }
