@@ -214,3 +214,19 @@ void mostrar(tlista lista)
 	for(i=lista.inicio->sig;i!=lista.inicio;i=i->sig)
 		cout<<i->dato<<endl;
 }
+
+void mostrar_recur(pnodo i;pnodo f)
+{
+	if(i==NULL)
+		cout<<"lista vacia"<<endl;
+	else
+	{
+		if(i==f)
+			cout<<i->dato<<endl;
+		else
+		{
+			cout<<i->dato<<endl;
+			mostrar_recur(i->sig,f);
+		}
+	}	
+}
