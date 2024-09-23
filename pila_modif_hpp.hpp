@@ -22,3 +22,31 @@ void agregar_pila(tpila &p,int nuevo)
 	}
 }
 
+bool pila_vacia(tpila p)
+{
+	return p[max_p-1]==-1;
+}
+
+int tope_pila(tpila p)
+{
+	int consultado;
+	
+	if(pila_vacia(p)==true)
+		consultado = 0;
+	else
+	{
+		consultado=p[p[max_p-1]];
+	}
+}
+
+int quitar_pila(tpila &p)
+{
+	int extraido;
+	if(pila_vacia(p)==true)
+		extraido=0;
+	else
+	{
+		extraido=p[p[max_p-1]];
+		p[p[max_p-1]]=p[p[max_p-1]]-1;
+	}
+}
