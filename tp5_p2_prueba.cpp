@@ -16,10 +16,10 @@ main()
 		cin>>n;
 		agregar_pila(p,n);
 	}
-	
 	cout<<"TOPE PILA: "<<tope_pila(p)<<endl;
 	
-	cout<<"MOSTRAR PILA: ";
+	
+	cout<<"MOSTRAR PILA ( 1:SI - 2:NO ): ";
 	cin>>c;
 	if(c==1)
 	{
