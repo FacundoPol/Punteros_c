@@ -8,7 +8,7 @@ void posfija(tcad interfija)
 	int i=0;
 	while(i<strlen(interfija))
 	{
-		if(interfija[i]<'0'&&interfija>'9')
+		if(interfija[i]<'0'||interfija>'9')
 		{
 			if(pila_vacia==true)
 			{
@@ -22,15 +22,17 @@ void posfija(tcad interfija)
 				}
 				else
 				{
-					posfija=posfija+quitar_pila(p);
+					posfija[i]=quitar_pila(p);
 					agregar_pila(p,intefija[i]);
 				}
 			}
 		}
 		else
 		{
-			posfija=posfija+intefija[i];
+			posfija[i]=intefija[i];
 		}
+		
+		i++;
 	}
 	
 	while(pila_vacia(p)!=true)
@@ -41,3 +43,5 @@ void posfija(tcad interfija)
 	for(k=0;k<strlen(posfija);k++)
 		cout<<posfija[k];
 }
+
+
