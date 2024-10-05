@@ -18,6 +18,7 @@ int fibo(int termino)
 			f=quitar_pila(p)+a;
 			agregar_pila(p,a);
 			agregar_pila(p.f);
+			termino--;
 		}
 		f=quitar(p)+quitar(p);
 	}
