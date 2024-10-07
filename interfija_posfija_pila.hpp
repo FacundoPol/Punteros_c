@@ -8,7 +8,7 @@ void posfija(tcad interfija)
 	int i=0;
 	while(i<strlen(interfija))
 	{
-		if(interfija[i]<'0'||interfija>'9')
+		if(interfija[i]<'0'||interfija[i]>'9')
 		{
 			if(pila_vacia==true)
 			{
