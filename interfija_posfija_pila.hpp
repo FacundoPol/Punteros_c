@@ -16,28 +16,25 @@ void posfija(tcad interfija)
 			}
 			else
 			{
-				if(prioridad(intefija[i],tope_pila(p))==true)
-				{
-					agregar_pila(p,intefija[i]);
-				}
-				else
+				while(prioridad(intefija[i],tope_pila(p))!=true)
 				{
 					posfija[i]=quitar_pila(p);
-					agregar_pila(p,intefija[i]);
 				}
+					agregar_pila(p,intefija[i]);
 			}
 		}
 		else
 		{
 			posfija[i]=intefija[i];
 		}
-		
+
 		i++;
 	}
 	
 	while(pila_vacia(p)!=true)
 	{
-		posfija=posfija+quitar_pila(p);
+		posfija[i]=quitar_pila(p);
+		i++;
 	}
 	
 	for(k=0;k<strlen(posfija);k++)
