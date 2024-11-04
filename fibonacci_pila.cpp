@@ -1,5 +1,4 @@
 
-
 int fibo(int termino)
 {
 	tpila p;

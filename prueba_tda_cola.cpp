@@ -9,7 +9,9 @@ using namespace std;
 //#include "tda_cola_tp7_p2.hpp"
 //#include "tda_cola_prior_almacenamiento.hpp"
 //#include "tda_cola_tp7_p4.hpp"
-#include "tda_cola_tp7_p4_v2.hpp"
+//#include "tda_cola_tp7_p4_v2.hpp"
+#include "tda_cola_tp7_p5_d.hpp"
+
 
 void menu_op(int &op);
 void menu(tcola &c,int op);
